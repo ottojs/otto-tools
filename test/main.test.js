@@ -151,4 +151,28 @@ describe('Module', function () {
 
   });
 
+  describe('.md5()', function () {
+
+    // Use this terminal script to test:
+    // Linux    : echo -n "my-input" | md5sum
+    // Mac OS X : echo -n "my-input" | md5
+
+    it('should MD5 hash "hello"', function () {
+      subject.md5('hello').should.be.type('string').and.equal('5d41402abc4b2a76b9719d911017c592');
+    });
+
+    it('should MD5 hash "goodbye"', function () {
+      subject.md5('goodbye').should.be.type('string').and.equal('69faab6268350295550de7d587bc323d');
+    });
+
+    it('should MD5 hash "hello" with salt correctly', function () {
+      subject.md5('hello', 'salt').should.be.type('string').and.equal('baddf52697306303627b97b2721e964a');
+    });
+
+    it('should MD5 hash "goodbye" with salt correctly', function () {
+      subject.md5('goodbye', 'salt').should.be.type('string').and.equal('4a81d497c14a768055a4d49196689d9e');
+    });
+
+  });
+
 });
