@@ -3,12 +3,14 @@
   "version" : "0.0.0",
   "repository" : "https://github.com/ottojs/otto-tools.git",
   "main" : "./lib/index.js",
-  "dependencies" : {},
+  "dependencies" : {
+    "lodash" : "2.4.1"
+  },
   "devDependencies" : {
-    "jshint"    : "2.5.3",
-    "mocha"     : "1.21.4",
-    "should"    : "4.0.4",
-    "istanbul"  : "0.3.0"
+    "jshint"   : "2.5.3",
+    "mocha"    : "1.21.4",
+    "should"   : "4.0.4",
+    "istanbul" : "0.3.0"
   },
   "scripts" : {
     "test" : "make test"
