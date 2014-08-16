@@ -115,12 +115,20 @@ describe('Module', function () {
 
   });
 
-  describe('.get_timestamp_ms', function () {
+  describe('.get_timestamp_ms()', function () {
 
     it('should provide a valid UNIX timestamp in milliseconds', function () {
       var timestamp = subject.get_timestamp_ms();
       timestamp.should.be.type('number');
       timestamp.toString().should.have.length(13);
+    });
+
+  });
+
+  describe('.uuid_random()', function () {
+
+    it('should provide a UUID', function () {
+      subject.uuid_random().should.be.type('string').with.length(32);
     });
 
   });
