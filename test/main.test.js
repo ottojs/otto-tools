@@ -25,4 +25,32 @@ describe('Module', function () {
 
   });
 
+  describe('.is_integer()', function () {
+
+    it('should return true for a true number integer', function () {
+      subject.is_integer(12).should.equal(true);
+      subject.is_integer(120354).should.equal(true);
+      subject.is_integer(2231).should.equal(true);
+    });
+
+    it('should return false for a string integer', function () {
+      subject.is_integer('12').should.equal(false);
+      subject.is_integer('120354').should.equal(false);
+      subject.is_integer('2231').should.equal(false);
+    });
+
+    it('should return false for a number decimal', function () {
+      subject.is_integer(1.12).should.equal(false);
+      subject.is_integer(1.120354).should.equal(false);
+      subject.is_integer(1.2231).should.equal(false);
+    });
+
+    it('should return false for a string decimal', function () {
+      subject.is_integer('1.12').should.equal(false);
+      subject.is_integer('1.120354').should.equal(false);
+      subject.is_integer('1.2231').should.equal(false);
+    });
+
+  });
+
 });
