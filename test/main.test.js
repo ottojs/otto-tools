@@ -105,4 +105,14 @@ describe('Module', function () {
 
   });
 
+  describe('.get_timestamp()', function () {
+
+    it('should provide a valid UNIX timestamp in seconds', function () {
+      var timestamp = subject.get_timestamp();
+      timestamp.should.be.type('number');
+      timestamp.toString().should.have.length(10);
+    });
+
+  });
+
 });
