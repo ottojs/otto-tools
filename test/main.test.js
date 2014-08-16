@@ -69,4 +69,32 @@ describe('Module', function () {
 
   });
 
+  describe('.string_to_boolean()', function () {
+
+    it('should convert truthy values to true', function () {
+      subject.string_to_boolean('true').should.equal(true);
+      subject.string_to_boolean(true).should.equal(true);
+      subject.string_to_boolean('1').should.equal(true);
+      subject.string_to_boolean(1).should.equal(true);
+      subject.string_to_boolean('yes').should.equal(true);
+    });
+
+    it('should convert falsy values to false', function () {
+      subject.string_to_boolean('false').should.equal(false);
+      subject.string_to_boolean(false).should.equal(false);
+      subject.string_to_boolean('0').should.equal(false);
+      subject.string_to_boolean(0).should.equal(false);
+      subject.string_to_boolean('no').should.equal(false);
+      subject.string_to_boolean('null').should.equal(false);
+      subject.string_to_boolean(null).should.equal(false);
+      subject.string_to_boolean(undefined).should.equal(false);
+    });
+
+    it('should handle bad input', function () {
+      subject.string_to_boolean('notabool').should.equal(false);
+      subject.string_to_boolean(134832).should.equal(false);
+    });
+
+  });
+
 });
