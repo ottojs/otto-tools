@@ -53,4 +53,20 @@ describe('Module', function () {
 
   });
 
+  describe('.is_empty_object()', function () {
+
+    it('should return true for an empty object literal', function () {
+      subject.is_empty_object({}).should.equal(true);
+    });
+
+    it('should return false for an object with one key', function () {
+      subject.is_empty_object({ key : 'value' }).should.equal(false);
+    });
+
+    it('should return false for an object with multiple keys', function () {
+      subject.is_empty_object({ key1 : 'one', key2 : 'two' }).should.equal(false);
+    });
+
+  });
+
 });
