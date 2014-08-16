@@ -115,4 +115,14 @@ describe('Module', function () {
 
   });
 
+  describe('.get_timestamp_ms', function () {
+
+    it('should provide a valid UNIX timestamp in milliseconds', function () {
+      var timestamp = subject.get_timestamp_ms();
+      timestamp.should.be.type('number');
+      timestamp.toString().should.have.length(13);
+    });
+
+  });
+
 });
