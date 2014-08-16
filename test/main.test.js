@@ -141,4 +141,14 @@ describe('Module', function () {
 
   });
 
+  describe('.url_decode()', function () {
+
+    it('should remove spaces from a string and nothing more (yet)', function () {
+      subject.url_decode('hello%20there').should.be.type('string').and.equal('hello there');
+      subject.url_decode('super%20long%20sentence%20with%20spaces%20and%20stuff')
+        .should.be.type('string').and.equal('super long sentence with spaces and stuff');
+    });
+
+  });
+
 });
