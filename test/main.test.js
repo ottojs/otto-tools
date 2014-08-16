@@ -133,4 +133,12 @@ describe('Module', function () {
 
   });
 
+  describe('.uuid()', function () {
+
+    it('should provide a UUID', function () {
+      subject.uuid().should.be.type('string').with.length(32);
+    });
+
+  });
+
 });
