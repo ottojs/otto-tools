@@ -97,4 +97,12 @@ describe('Module', function () {
 
   });
 
+  describe('.string_to_integer()', function () {
+
+    it('should convert a string to a base 10 integer', function () {
+      subject.string_to_integer('102').should.equal(102);
+    });
+
+  });
+
 });
