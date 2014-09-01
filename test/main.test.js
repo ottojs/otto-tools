@@ -25,6 +25,22 @@ describe('Module', function () {
 
   });
 
+  describe('.is_string()', function () {
+
+    it('should return false when value not a string', function () {
+      subject.is_string(123).should.equal(false);
+    });
+
+    it('should return true when value is a literal string', function () {
+      subject.is_string('literal').should.equal(true);
+    });
+
+    it('should return true when value is a String object', function () {
+      subject.is_string(new String('string-object')).should.equal(true);
+    });
+
+  });
+
   describe('.is_integer()', function () {
 
     it('should return true for a true number integer', function () {
