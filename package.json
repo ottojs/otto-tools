@@ -1,6 +1,6 @@
 {
   "name" : "otto-tools",
-  "version" : "0.0.3",
+  "version" : "0.1.0",
   "repository" : "https://github.com/ottojs/otto-tools.git",
   "main" : "./lib/index.js",
   "dependencies" : {
