@@ -4,19 +4,19 @@
   "repository" : "https://github.com/ottojs/otto-tools.git",
   "main" : "./lib/index.js",
   "dependencies" : {
-    "lodash"    : "2.4.1",
-    "node-uuid" : "1.4.1"
+    "lodash"    : "3.10.1",
+    "node-uuid" : "1.4.3"
   },
   "devDependencies" : {
-    "jshint"   : "2.5.10",
-    "mocha"    : "2.0.1",
-    "should"   : "4.3.0",
-    "istanbul" : "0.3.2"
+    "jshint"   : "2.8.0",
+    "mocha"    : "2.2.5",
+    "should"   : "7.0.4",
+    "istanbul" : "0.3.18"
   },
   "scripts" : {
     "test" : "make test"
   },
   "engines" : {
-    "node" : "0.10.x"
+    "node" : "0.12.x"
   }
 }
