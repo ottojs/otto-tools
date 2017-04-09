@@ -1,6 +1,7 @@
 {
   "name" : "otto-tools",
   "version" : "0.2.0",
+  "license" : "MIT",
   "repository" : "https://github.com/ottojs/otto-tools.git",
   "main" : "./lib/index.js",
   "dependencies" : {
